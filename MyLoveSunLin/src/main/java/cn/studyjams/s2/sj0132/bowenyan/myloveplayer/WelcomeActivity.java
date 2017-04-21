@@ -23,10 +23,10 @@ public class WelcomeActivity extends Activity {
 
             @Override
             public void run() {
-                if (preferences.getBoolean("firststart", true)) {
+                if (preferences.getBoolean("firstBoot", true)) {
                     editor = preferences.edit();
                     //将登录标志位设置为false，下次登录时不在显示首次登录界面
-                    editor.putBoolean("firststart", false);
+                    editor.putBoolean("firstBoot", false);
                     editor.commit();
                     Intent intent = new Intent();
                     intent.setClass(WelcomeActivity.this, AndyViewPagerActivity.class);

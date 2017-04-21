@@ -42,12 +42,12 @@ public class AndyViewPagerActivity extends Activity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.welcome);
         button = (Button) findViewById(R.id.button);
-        views = new ArrayList<View>();
+        views = new ArrayList<>();
 
         LinearLayout.LayoutParams mParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT);
 
-        //初始化引导图片列�?
+        //初始化引导图片列
         for (int i = 0; i < pics.length; i++) {
             ImageView iv = new ImageView(this);
             iv.setLayoutParams(mParams);
@@ -59,8 +59,7 @@ public class AndyViewPagerActivity extends Activity implements View.OnClickListe
         vpAdapter = new ViewPagerAdapter(views);
         vp.setAdapter(vpAdapter);
         //绑定回调
-        vp.setOnPageChangeListener(this);
-//        button = (Button) findViewById(R.id.button);
+        vp.addOnPageChangeListener(this);
         //初始化底部小
         initDots();
         button.setOnClickListener(new View.OnClickListener() {
@@ -83,13 +82,13 @@ public class AndyViewPagerActivity extends Activity implements View.OnClickListe
         //循环取得小点图片
         for (int i = 0; i < pics.length; i++) {
             dots[i] = (ImageView) ll.getChildAt(i);
-            dots[i].setEnabled(true);//都设为灰�?
-            dots[i].setOnClickListener((View.OnClickListener) this);
+            dots[i].setEnabled(true);//都设为灰
+            dots[i].setOnClickListener(this);
             dots[i].setTag(i);//设置位置tag，方便取出与当前位置对应
         }
 
         currentIndex = 0;
-        dots[currentIndex].setEnabled(false);//设置为白色，即�?中状�?
+        dots[currentIndex].setEnabled(false);//设置为白色
     }
 
     /**
@@ -104,17 +103,17 @@ public class AndyViewPagerActivity extends Activity implements View.OnClickListe
     }
 
     /**
-     * 这只当前引导小点的�?�?
+     * 这只当前引导小点的
      */
-    private void setCurDot(int positon) {
-        if (positon < 0 || positon > pics.length - 1 || currentIndex == positon) {
+    private void setCurDot(int position) {
+        if (position < 0 || position > pics.length - 1 || currentIndex == position) {
             return;
         }
 
-        dots[positon].setEnabled(false);
+        dots[position].setEnabled(false);
         dots[currentIndex].setEnabled(true);
 
-        currentIndex = positon;
+        currentIndex = position;
     }
 
     //当滑动状态改变时调用
@@ -124,17 +123,17 @@ public class AndyViewPagerActivity extends Activity implements View.OnClickListe
 
     }
 
-    //当当前页面被滑动时调�?
+    //当当前页面被滑动时调
     @Override
     public void onPageScrolled(int arg0, float arg1, int arg2) {
         // TODO Auto-generated method stub
 
     }
 
-    //当新的页面被选中时调�?
+    //当新的页面被选中时调
     @Override
     public void onPageSelected(int arg0) {
-        //设置底部小点选中状�?
+        //设置底部小点选中状
         setCurDot(arg0);
         if (arg0 == 3) {
             button.setVisibility(View.VISIBLE);
