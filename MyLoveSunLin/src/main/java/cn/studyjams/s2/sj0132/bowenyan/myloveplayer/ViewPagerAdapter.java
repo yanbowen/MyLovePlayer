@@ -38,10 +38,8 @@ public class ViewPagerAdapter extends PagerAdapter {
         if (views != null) {
             return views.size();
         }
-
         return 0;
     }
-
 
     //初始化arg1位置的界
     @Override
