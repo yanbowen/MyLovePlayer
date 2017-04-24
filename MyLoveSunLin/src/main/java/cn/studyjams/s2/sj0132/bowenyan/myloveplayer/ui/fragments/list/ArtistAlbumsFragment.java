@@ -38,8 +38,7 @@ import cn.studyjams.s2.sj0132.bowenyan.myloveplayer.ui.adapters.ArtistAlbumAdapt
 import static cn.studyjams.s2.sj0132.bowenyan.myloveplayer.Constants.*;
 
 /**
- * @author Andrew Neal
- * @Note This is used in the @TracksBrowser after touching an artist from @ArtistsFragment
+ * Created by yanbowen on 4/20/2017.
  */
 public class ArtistAlbumsFragment extends Fragment implements LoaderCallbacks<Cursor>,
         OnItemClickListener {

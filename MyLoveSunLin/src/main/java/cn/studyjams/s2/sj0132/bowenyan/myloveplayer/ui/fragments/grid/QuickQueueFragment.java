@@ -39,7 +39,7 @@ import cn.studyjams.s2.sj0132.bowenyan.myloveplayer.ui.adapters.QuickQueueAdapte
 
 
 /**
- * @author Andrew Neal
+ * Created by yanbowen on 4/20/2017.
  */
 public class QuickQueueFragment extends Fragment implements LoaderCallbacks<Cursor>,
         OnItemClickListener {

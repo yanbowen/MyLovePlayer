@@ -33,8 +33,7 @@ import static cn.studyjams.s2.sj0132.bowenyan.myloveplayer.Constants.*;
 
 
 /**
- * @author Andrew Neal
- * @Note This is the fifth and final tab
+ * Created by yanbowen on 4/20/2017.
  */
 public class GenresFragment extends Fragment implements LoaderCallbacks<Cursor>,
         OnItemClickListener {

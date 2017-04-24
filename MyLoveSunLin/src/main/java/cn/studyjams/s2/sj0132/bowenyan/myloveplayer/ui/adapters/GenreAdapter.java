@@ -16,14 +16,14 @@ import cn.studyjams.s2.sj0132.bowenyan.myloveplayer.views.ViewHolderList;
 
 
 /**
- * @author Andrew Neal
+ * Created by yanbowen on 4/20/2017.
  */
 public class GenreAdapter extends SimpleCursorAdapter {
 
     private WeakReference<ViewHolderList> holderReference;
 
     private final int left;
-    
+
     private Context mContext;
 
     public GenreAdapter(Context context, int layout, Cursor c, String[] from, int[] to, int flags) {
@@ -59,7 +59,7 @@ public class GenreAdapter extends SimpleCursorAdapter {
             view.setTag(holderReference.get());
 
         } else {
-            viewholder = (ViewHolderList)convertView.getTag();
+            viewholder = (ViewHolderList) convertView.getTag();
         }
 
         // Genre name

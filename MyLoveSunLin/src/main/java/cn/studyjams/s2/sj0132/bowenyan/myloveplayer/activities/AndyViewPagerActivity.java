@@ -61,7 +61,7 @@ public class AndyViewPagerActivity extends Activity implements View.OnClickListe
         vpAdapter = new ViewPagerAdapter(views);
         vp.setAdapter(vpAdapter);
         //绑定回调
-        vp.addOnPageChangeListener(this);
+        vp.setOnPageChangeListener(this);
         //初始化底部小
         initDots();
         button.setOnClickListener(new View.OnClickListener() {

@@ -22,7 +22,7 @@ import cn.studyjams.s2.sj0132.bowenyan.myloveplayer.views.ViewHolderGrid;
 import static cn.studyjams.s2.sj0132.bowenyan.myloveplayer.Constants.*;
 
 /**
- * @author Andrew Neal
+ * Created by yanbowen on 4/20/2017.
  */
 public class AlbumAdapter extends SimpleCursorAdapter {
 
@@ -31,13 +31,13 @@ public class AlbumAdapter extends SimpleCursorAdapter {
     private WeakReference<ViewHolderGrid> holderReference;
 
     private Context mContext;
-    
+
     private ImageProvider mImageProvider;
 
     public AlbumAdapter(Context context, int layout, Cursor c, String[] from, int[] to, int flags) {
         super(context, layout, c, from, to, flags);
-    	mContext = context;
-    	mImageProvider = ImageProvider.getInstance( (Activity) mContext );
+        mContext = context;
+        mImageProvider = ImageProvider.getInstance((Activity) mContext);
     }
 
     @Override
@@ -55,9 +55,9 @@ public class AlbumAdapter extends SimpleCursorAdapter {
             view.setTag(holderReference.get());
 
         } else {
-            viewholder = (ViewHolderGrid)convertView.getTag();
+            viewholder = (ViewHolderGrid) convertView.getTag();
         }
-        
+
 
         // Album name
         String albumName = mCursor.getString(AlbumsFragment.mAlbumNameIndex);
@@ -66,7 +66,7 @@ public class AlbumAdapter extends SimpleCursorAdapter {
         // Artist name
         String artistName = mCursor.getString(AlbumsFragment.mArtistNameIndex);
         holderReference.get().mViewHolderLineTwo.setText(artistName);
-        
+
         // Album ID
         String albumId = mCursor.getString(AlbumsFragment.mAlbumIdIndex);
 
@@ -74,9 +74,9 @@ public class AlbumAdapter extends SimpleCursorAdapter {
         mInfo.type = TYPE_ALBUM;
         mInfo.size = SIZE_THUMB;
         mInfo.source = SRC_FIRST_AVAILABLE;
-        mInfo.data = new String[]{ albumId , artistName, albumName };
-        
-        mImageProvider.loadImage( viewholder.mViewHolderImage, mInfo );
+        mInfo.data = new String[]{albumId, artistName, albumName};
+
+        mImageProvider.loadImage(viewholder.mViewHolderImage, mInfo);
 
         // Now playing indicator
         long currentalbumid = MusicUtils.getCurrentAlbumId();
@@ -84,8 +84,8 @@ public class AlbumAdapter extends SimpleCursorAdapter {
         if (currentalbumid == albumid) {
             holderReference.get().mPeakOne.setImageResource(R.drawable.peak_meter_1);
             holderReference.get().mPeakTwo.setImageResource(R.drawable.peak_meter_2);
-            mPeakOneAnimation = (AnimationDrawable)holderReference.get().mPeakOne.getDrawable();
-            mPeakTwoAnimation = (AnimationDrawable)holderReference.get().mPeakTwo.getDrawable();
+            mPeakOneAnimation = (AnimationDrawable) holderReference.get().mPeakOne.getDrawable();
+            mPeakTwoAnimation = (AnimationDrawable) holderReference.get().mPeakTwo.getDrawable();
             try {
                 if (MusicUtils.mService.isPlaying()) {
                     mPeakOneAnimation.start();

@@ -23,22 +23,22 @@ import cn.studyjams.s2.sj0132.bowenyan.myloveplayer.views.ViewHolderGrid;
 import static cn.studyjams.s2.sj0132.bowenyan.myloveplayer.Constants.*;
 
 /**
- * @author Andrew Neal
+ * Created by yanbowen on 4/20/2017.
  */
 public class ArtistAdapter extends SimpleCursorAdapter {
 
     private AnimationDrawable mPeakOneAnimation, mPeakTwoAnimation;
 
     private WeakReference<ViewHolderGrid> holderReference;
-    
+
     private Context mContext;
-    
+
     private ImageProvider mImageProvider;
 
     public ArtistAdapter(Context context, int layout, Cursor c, String[] from, int[] to, int flags) {
         super(context, layout, c, from, to, flags);
-    	mContext = context;
-    	mImageProvider = ImageProvider.getInstance( (Activity) mContext );
+        mContext = context;
+        mImageProvider = ImageProvider.getInstance((Activity) mContext);
     }
 
     @Override
@@ -56,7 +56,7 @@ public class ArtistAdapter extends SimpleCursorAdapter {
             view.setTag(holderReference.get());
 
         } else {
-            viewholder = (ViewHolderGrid)convertView.getTag();
+            viewholder = (ViewHolderGrid) convertView.getTag();
         }
 
         // Artist Name
@@ -73,9 +73,9 @@ public class ArtistAdapter extends SimpleCursorAdapter {
         mInfo.type = TYPE_ARTIST;
         mInfo.size = SIZE_THUMB;
         mInfo.source = SRC_FIRST_AVAILABLE;
-        mInfo.data = new String[]{ artistName };
-        
-        mImageProvider.loadImage( viewholder.mViewHolderImage, mInfo );
+        mInfo.data = new String[]{artistName};
+
+        mImageProvider.loadImage(viewholder.mViewHolderImage, mInfo);
 
         // Now playing indicator
         long currentartistid = MusicUtils.getCurrentArtistId();
@@ -83,8 +83,8 @@ public class ArtistAdapter extends SimpleCursorAdapter {
         if (currentartistid == artistid) {
             holderReference.get().mPeakOne.setImageResource(R.drawable.peak_meter_1);
             holderReference.get().mPeakTwo.setImageResource(R.drawable.peak_meter_2);
-            mPeakOneAnimation = (AnimationDrawable)holderReference.get().mPeakOne.getDrawable();
-            mPeakTwoAnimation = (AnimationDrawable)holderReference.get().mPeakTwo.getDrawable();
+            mPeakOneAnimation = (AnimationDrawable) holderReference.get().mPeakOne.getDrawable();
+            mPeakTwoAnimation = (AnimationDrawable) holderReference.get().mPeakTwo.getDrawable();
             try {
                 if (MusicUtils.mService.isPlaying()) {
                     mPeakOneAnimation.start();

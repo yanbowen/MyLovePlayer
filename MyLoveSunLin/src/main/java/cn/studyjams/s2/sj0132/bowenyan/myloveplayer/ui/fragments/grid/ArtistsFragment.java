@@ -38,7 +38,7 @@ import cn.studyjams.s2.sj0132.bowenyan.myloveplayer.ui.adapters.ArtistAdapter;
 import static cn.studyjams.s2.sj0132.bowenyan.myloveplayer.Constants.*;
 
 /**
- * @author Andrew Neal
+ * Created by yanbowen on 4/20/2017.
  * @Note This is the first tab
  */
 public class ArtistsFragment extends Fragment implements LoaderCallbacks<Cursor>,

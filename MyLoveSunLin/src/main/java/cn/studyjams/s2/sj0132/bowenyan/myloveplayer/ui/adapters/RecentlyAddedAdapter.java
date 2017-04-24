@@ -23,7 +23,7 @@ import cn.studyjams.s2.sj0132.bowenyan.myloveplayer.views.ViewHolderList;
 import static cn.studyjams.s2.sj0132.bowenyan.myloveplayer.Constants.*;
 
 /**
- * @author Andrew Neal
+ * Created by yanbowen on 4/20/2017.
  */
 public class RecentlyAddedAdapter extends SimpleCursorAdapter {
 
@@ -32,20 +32,20 @@ public class RecentlyAddedAdapter extends SimpleCursorAdapter {
     private WeakReference<ViewHolderList> holderReference;
 
     private Context mContext;
-    
+
     private ImageProvider mImageProvider;
 
     public RecentlyAddedAdapter(Context context, int layout, Cursor c, String[] from, int[] to,
-            int flags) {
+                                int flags) {
         super(context, layout, c, from, to, flags);
-    	mContext = context;
-    	mImageProvider = ImageProvider.getInstance( (Activity) mContext );
+        mContext = context;
+        mImageProvider = ImageProvider.getInstance((Activity) mContext);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         final View view = super.getView(position, convertView, parent);
-        
+
         Cursor mCursor = (Cursor) getItem(position);
         // ViewHolderList
         ViewHolderList viewholder;
@@ -57,7 +57,7 @@ public class RecentlyAddedAdapter extends SimpleCursorAdapter {
             view.setTag(holderReference.get());
 
         } else {
-            viewholder = (ViewHolderList)convertView.getTag();
+            viewholder = (ViewHolderList) convertView.getTag();
         }
 
         // Track name
@@ -70,7 +70,7 @@ public class RecentlyAddedAdapter extends SimpleCursorAdapter {
 
         // Album name
         String albumName = mCursor.getString(RecentlyAddedFragment.mAlbumIndex);
-        
+
 
         // Album ID
         String albumId = mCursor.getString(RecentlyAddedFragment.mAlbumIdIndex);
@@ -79,9 +79,9 @@ public class RecentlyAddedAdapter extends SimpleCursorAdapter {
         mInfo.type = TYPE_ALBUM;
         mInfo.size = SIZE_THUMB;
         mInfo.source = SRC_FIRST_AVAILABLE;
-        mInfo.data = new String[]{ albumId , artistName, albumName };
-        
-        mImageProvider.loadImage( viewholder.mViewHolderImage, mInfo );
+        mInfo.data = new String[]{albumId, artistName, albumName};
+
+        mImageProvider.loadImage(viewholder.mViewHolderImage, mInfo);
 
         holderReference.get().mQuickContext.setVisibility(View.GONE);
 
@@ -91,8 +91,8 @@ public class RecentlyAddedAdapter extends SimpleCursorAdapter {
         if (currentaudioid == audioid) {
             holderReference.get().mPeakOne.setImageResource(R.drawable.peak_meter_1);
             holderReference.get().mPeakTwo.setImageResource(R.drawable.peak_meter_2);
-            mPeakOneAnimation = (AnimationDrawable)holderReference.get().mPeakOne.getDrawable();
-            mPeakTwoAnimation = (AnimationDrawable)holderReference.get().mPeakTwo.getDrawable();
+            mPeakOneAnimation = (AnimationDrawable) holderReference.get().mPeakOne.getDrawable();
+            mPeakTwoAnimation = (AnimationDrawable) holderReference.get().mPeakTwo.getDrawable();
             try {
                 if (MusicUtils.mService.isPlaying()) {
                     mPeakOneAnimation.start();

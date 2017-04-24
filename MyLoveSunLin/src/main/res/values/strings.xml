@@ -93,22 +93,22 @@
     <string name="image_edit_playlist">Edit Playlist Image</string>
 
     <!-- App Widgets -->
-    <string name="apollo_1x1">Apollo (1x1)</string>
-    <string name="apollo_4x1">Apollo (4x1)</string>
-    <string name="apollo_4x2">Apollo (4x2)</string>
+    <string name="apollo_1x1">My Love Sun Lin (1x1)</string>
+    <string name="apollo_4x1">My Love Sun Lin (4x1)</string>
+    <string name="apollo_4x2">My Love Sun Lin (4x2)</string>
 
     <!-- Unknown genre name -->
     <string name="unknown">Unknown</string>
 
     <!-- Settings -->
-    <string name="about">About Apollo</string>
+    <string name="about">About My Love Sun Lin</string>
     <string name="eqalizer">Equalizer</string>
     <string name="header_interface">Interface</string>
     <string name="settings_storage_category">Storage</string>
     <string name="themes">Themes</string>
-    <string name="apollo_themes">Select theme for Apollo</string>
+    <string name="apollo_themes">Select theme for My Love Sun Lin</string>
     <string name="select_theme">Select your theme</string>
-    <string name="version">Apollo Version</string>
+    <string name="version">My Love Sun Lin Version</string>
     <string name="tab_visibility_title">Tab visibility</string>
     <string name="tab_visibility_summary">Choose which tabs are displayed</string>
     <string name="settings_delete_cache_title">Delete cache</string>

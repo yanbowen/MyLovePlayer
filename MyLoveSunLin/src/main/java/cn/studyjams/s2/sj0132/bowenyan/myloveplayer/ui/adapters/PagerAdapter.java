@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 
 package cn.studyjams.s2.sj0132.bowenyan.myloveplayer.ui.adapters;
@@ -13,7 +13,7 @@ import android.support.v13.app.FragmentPagerAdapter;
 import cn.studyjams.s2.sj0132.bowenyan.myloveplayer.helpers.RefreshableFragment;
 
 /**
- * @author Andrew Neal
+ * Created by yanbowen on 4/20/2017.
  */
 public class PagerAdapter extends FragmentPagerAdapter {
 
@@ -43,8 +43,8 @@ public class PagerAdapter extends FragmentPagerAdapter {
      */
     public void refresh() {
         for (int i = 0; i < mFragments.size(); i++) {
-            if( mFragments.get(i) instanceof RefreshableFragment) {
-                ((RefreshableFragment)mFragments.get(i)).refresh();
+            if (mFragments.get(i) instanceof RefreshableFragment) {
+                ((RefreshableFragment) mFragments.get(i)).refresh();
             }
         }
     }

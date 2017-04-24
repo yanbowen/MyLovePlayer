@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 
 package cn.studyjams.s2.sj0132.bowenyan.myloveplayer.ui.adapters;
@@ -17,12 +17,12 @@ import cn.studyjams.s2.sj0132.bowenyan.myloveplayer.ui.fragments.list.PlaylistsF
 import cn.studyjams.s2.sj0132.bowenyan.myloveplayer.views.ViewHolderList;
 
 /**
- * @author Andrew Neal
+ * Created by yanbowen on 4/20/2017.
  */
 public class PlaylistAdapter extends SimpleCursorAdapter {
 
     private WeakReference<ViewHolderList> holderReference;
-    
+
     private Context mContext;
 
     public PlaylistAdapter(Context context, int layout, Cursor c, String[] from, int[] to, int flags) {
@@ -55,7 +55,7 @@ public class PlaylistAdapter extends SimpleCursorAdapter {
             view.setTag(holderReference.get());
 
         } else {
-            viewholder = (ViewHolderList)convertView.getTag();
+            viewholder = (ViewHolderList) convertView.getTag();
         }
 
         String playlist_name = mCursor.getString(PlaylistsFragment.mPlaylistNameIndex);

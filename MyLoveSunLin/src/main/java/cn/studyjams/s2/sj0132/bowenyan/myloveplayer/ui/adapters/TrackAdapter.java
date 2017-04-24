@@ -17,7 +17,7 @@ import cn.studyjams.s2.sj0132.bowenyan.myloveplayer.ui.fragments.list.TracksFrag
 import cn.studyjams.s2.sj0132.bowenyan.myloveplayer.views.ViewHolderList;
 
 /**
- * @author Andrew Neal
+ * Created by yanbowen on 4/20/2017.
  */
 public class TrackAdapter extends SimpleCursorAdapter {
 
@@ -54,7 +54,7 @@ public class TrackAdapter extends SimpleCursorAdapter {
             view.setTag(holderReference.get());
 
         } else {
-            viewholder = (ViewHolderList)convertView.getTag();
+            viewholder = (ViewHolderList) convertView.getTag();
         }
 
         // Track name
@@ -76,8 +76,8 @@ public class TrackAdapter extends SimpleCursorAdapter {
         if (currentaudioid == audioid) {
             holderReference.get().mPeakOne.setImageResource(R.drawable.peak_meter_1);
             holderReference.get().mPeakTwo.setImageResource(R.drawable.peak_meter_2);
-            mPeakOneAnimation = (AnimationDrawable)holderReference.get().mPeakOne.getDrawable();
-            mPeakTwoAnimation = (AnimationDrawable)holderReference.get().mPeakTwo.getDrawable();
+            mPeakOneAnimation = (AnimationDrawable) holderReference.get().mPeakOne.getDrawable();
+            mPeakTwoAnimation = (AnimationDrawable) holderReference.get().mPeakTwo.getDrawable();
             try {
                 if (MusicUtils.mService.isPlaying()) {
                     mPeakOneAnimation.start();

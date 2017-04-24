@@ -18,21 +18,21 @@ import cn.studyjams.s2.sj0132.bowenyan.myloveplayer.views.ViewHolderQueue;
 import static cn.studyjams.s2.sj0132.bowenyan.myloveplayer.Constants.*;
 
 /**
- * @author Andrew Neal
+ * Created by yanbowen on 4/20/2017.
  */
 public class QuickQueueAdapter extends SimpleCursorAdapter {
 
     private WeakReference<ViewHolderQueue> holderReference;
 
     private Context mContext;
-    
+
     private ImageProvider mImageProvider;
-    
+
     public QuickQueueAdapter(Context context, int layout, Cursor c, String[] from, int[] to,
-            int flags) {
+                             int flags) {
         super(context, layout, c, from, to, flags);
-    	mContext = context;
-    	mImageProvider = ImageProvider.getInstance( (Activity) mContext );
+        mContext = context;
+        mImageProvider = ImageProvider.getInstance((Activity) mContext);
     }
 
     @Override
@@ -50,7 +50,7 @@ public class QuickQueueAdapter extends SimpleCursorAdapter {
             view.setTag(holderReference.get());
 
         } else {
-            viewholder = (ViewHolderQueue)convertView.getTag();
+            viewholder = (ViewHolderQueue) convertView.getTag();
         }
 
         // Artist Name
@@ -70,15 +70,15 @@ public class QuickQueueAdapter extends SimpleCursorAdapter {
         mInfo.type = TYPE_ALBUM;
         mInfo.size = SIZE_THUMB;
         mInfo.source = SRC_FIRST_AVAILABLE;
-        mInfo.data = new String[]{ albumId , artistName, albumName };        
-        mImageProvider.loadImage( viewholder.mAlbumArt, mInfo );
+        mInfo.data = new String[]{albumId, artistName, albumName};
+        mImageProvider.loadImage(viewholder.mAlbumArt, mInfo);
 
         mInfo = new ImageInfo();
         mInfo.type = TYPE_ARTIST;
         mInfo.size = SIZE_THUMB;
         mInfo.source = SRC_FIRST_AVAILABLE;
-        mInfo.data = new String[]{ artistName };
-        mImageProvider.loadImage( viewholder.mArtistImage, mInfo );
+        mInfo.data = new String[]{artistName};
+        mImageProvider.loadImage(viewholder.mArtistImage, mInfo);
 
         return view;
     }

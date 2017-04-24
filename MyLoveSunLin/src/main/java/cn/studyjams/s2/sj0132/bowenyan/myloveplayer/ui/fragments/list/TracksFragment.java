@@ -47,7 +47,7 @@ import static cn.studyjams.s2.sj0132.bowenyan.myloveplayer.Constants.*;
 
 
 /**
- * @author Andrew Neal
+ * Created by yanbowen on 4/20/2017.
  */
 public class TracksFragment extends RefreshableFragment implements LoaderCallbacks<Cursor>,
         OnItemClickListener {
