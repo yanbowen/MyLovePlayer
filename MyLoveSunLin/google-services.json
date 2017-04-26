@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "328847673792",
+    "firebase_url": "https://firecast-app-e4daa.firebaseio.com",
+    "project_id": "firecast-app-e4daa",
+    "storage_bucket": "firecast-app-e4daa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:328847673792:android:d46f977b654e5d33",
+        "android_client_info": {
+          "package_name": "cn.studyjams.s2.sj0132.bowenyan.myloveplayer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "328847673792-o35ikfhpd0a2jhp2gd82qucpc80mnuvt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cn.studyjams.s2.sj0132.bowenyan.myloveplayer",
+            "certificate_hash": "214a0ebd09c1753ff411d6274edf87c17699c946"
+          }
+        },
+        {
+          "client_id": "328847673792-sm96fr4uojq2g1lc1qf1hnj0gckh40up.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5VSZQYmxGsBb5UnR6Bq5GTjfqju7unZY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "328847673792-sm96fr4uojq2g1lc1qf1hnj0gckh40up.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

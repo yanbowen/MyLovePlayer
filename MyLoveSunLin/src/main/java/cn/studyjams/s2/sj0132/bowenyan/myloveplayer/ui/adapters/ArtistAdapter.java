@@ -28,11 +28,8 @@ import static cn.studyjams.s2.sj0132.bowenyan.myloveplayer.Constants.*;
 public class ArtistAdapter extends SimpleCursorAdapter {
 
     private AnimationDrawable mPeakOneAnimation, mPeakTwoAnimation;
-
     private WeakReference<ViewHolderGrid> holderReference;
-
     private Context mContext;
-
     private ImageProvider mImageProvider;
 
     public ArtistAdapter(Context context, int layout, Cursor c, String[] from, int[] to, int flags) {

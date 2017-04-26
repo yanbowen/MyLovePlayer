@@ -61,7 +61,7 @@ public class SettingsHolder extends PreferenceActivity  implements ServiceConnec
         initDeleteCache();
 
         // Load the theme chooser
-        initThemeChooser();
+//        initThemeChooser();
 
         //Enable up button
         // getActionBar().setDisplayHomeAsUpEnabled(true);

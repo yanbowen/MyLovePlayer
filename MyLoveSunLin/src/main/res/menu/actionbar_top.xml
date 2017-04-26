@@ -24,8 +24,8 @@
         <menu>
             <item android:id="@+id/action_settings"
                   android:title="@string/settings" />
-            <item android:id="@+id/action_eqalizer"
-                  android:title="@string/eqalizer" />
+            <!--<item android:id="@+id/action_eqalizer"-->
+                  <!--android:title="@string/eqalizer" />-->
             <item android:id="@+id/action_shuffle_all"
                   android:title="@string/shuffle_all" />
         </menu>
