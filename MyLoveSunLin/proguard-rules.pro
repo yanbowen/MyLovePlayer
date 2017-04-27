@@ -23,3 +23,10 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+-ignorewarnings
+
+-dontwarn android.support.v4.**
+
+-keep class android.support.v4.** { *; }
+-keep interface android.support.v4.app.** { *; }
+-keep public class * extends android.support.v4.**

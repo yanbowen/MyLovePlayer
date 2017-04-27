@@ -4,6 +4,7 @@
 
 package cn.studyjams.s2.sj0132.bowenyan.myloveplayer.ui.fragments.grid;
 
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.BroadcastReceiver;
@@ -41,6 +42,7 @@ import cn.studyjams.s2.sj0132.bowenyan.myloveplayer.ui.adapters.QuickQueueAdapte
 /**
  * Created by yanbowen on 4/20/2017.
  */
+@SuppressLint("ValidFragment")
 public class QuickQueueFragment extends Fragment implements LoaderCallbacks<Cursor>,
         OnItemClickListener {
 

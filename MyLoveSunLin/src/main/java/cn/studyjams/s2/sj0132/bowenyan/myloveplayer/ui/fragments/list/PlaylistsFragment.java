@@ -4,6 +4,7 @@
 
 package cn.studyjams.s2.sj0132.bowenyan.myloveplayer.ui.fragments.list;
 
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.ContentUris;
@@ -39,6 +40,7 @@ import static cn.studyjams.s2.sj0132.bowenyan.myloveplayer.Constants.*;
 /**
  * Created by yanbowen on 4/20/2017.
  */
+@SuppressLint("ValidFragment")
 public class PlaylistsFragment extends Fragment implements LoaderCallbacks<Cursor>,
         OnItemClickListener {
 

@@ -4,6 +4,7 @@
 
 package cn.studyjams.s2.sj0132.bowenyan.myloveplayer.ui.fragments.grid;
 
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.BroadcastReceiver;
@@ -41,6 +42,7 @@ import static cn.studyjams.s2.sj0132.bowenyan.myloveplayer.Constants.*;
  * Created by yanbowen on 4/20/2017.
  * @Note This is the first tab
  */
+@SuppressLint("ValidFragment")
 public class ArtistsFragment extends Fragment implements LoaderCallbacks<Cursor>,
         OnItemClickListener {
 

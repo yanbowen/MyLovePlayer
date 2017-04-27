@@ -79,6 +79,10 @@
     <string name="delete_playlist">删除播放列表</string>
     <string name="search">搜索</string>
     <string name="remove">从播放列表中移除</string>
+    <string name="image_edit_gallery">New image from gallery</string>
+    <string name="image_edit_file">Original image from file</string>
+    <string name="image_edit_lastfm">Fetch image from last.fm</string>
+    <string name="image_edit_web">Search the web for an image</string>
 
     <!-- App Widgets -->
     <string name="apollo_1x1">My Love Sun Lin (1x1)</string>
@@ -96,6 +100,18 @@
     <string name="apollo_themes">选择 My Love Sun Lin 的主题</string>
     <string name="select_theme">选择您的主题</string>
     <string name="version">四季豆音乐 版本</string>
+    <string name="settings_storage_category">Storage</string>
+    <string name="tab_visibility_title">Tab visibility</string>
+    <string name="tab_visibility_summary">Choose which tabs are displayed</string>
+    <string name="settings_delete_cache_title">Delete cache</string>
+    <string name="settings_delete_cache_summary">Remove all cached images</string>
+    <string name="delete_warning">This will permanently delete the cached image entries</string>
+    <string name="visualizer_title">Audio visualizer</string>
+    <string name="visualizer_summary">Choose to display audio visualizations during playback</string>
+    <string name="widget_style_title">Widget Style</string>
+    <string name="widget_style_summary">Choose the widget design</string>
+    <string name="widget_style_dark">Holo Dark</string>
+    <string name="widget_style_light">Holo Light</string>
 
     <!-- Theme layout Buttons -->
     <string name="apply_theme">应用主题</string>
@@ -127,4 +143,19 @@
     <string name="play_external_question_button_cancel">取消</string>
     <string name="play_external_error">无法播放文件</string>
 
+    <!--  ContextMenu Headers -->
+    <string name="image_edit_albums">Edit Album Artwork</string>
+    <string name="image_edit_artists">Edit Artist Image</string>
+    <string name="image_edit_genre">Edit Genre Image</string>
+    <string name="image_edit_playlist">Edit Playlist Image</string>
+
+    <!-- Visualizations -->
+    <string name="visual_none">None</string>
+    <string name="visual_bargraph">Bar Graph</string>
+    <string name="visual_solidbargraph">Solid Bar Graph</string>
+    <string name="visual_waveform">Waveform</string>
+
+    <!-- Titles for Albums/Artist screens -->
+    <string name="artist_page_title">" Artist: "</string>
+    <string name="album_page_title">" Album: "</string>
 </resources>
