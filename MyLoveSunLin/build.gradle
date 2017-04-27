@@ -13,6 +13,17 @@ android {
         multiDexEnabled true
     }
     buildTypes {
+        debug {
+            // 显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+
+            versionNameSuffix "-debug"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+        }
+
         release {
             //Zipalign优化
             zipAlignEnabled true

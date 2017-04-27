@@ -31,7 +31,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:taskAffinity="apollo.task.music"
-        android:theme="@android:style/Theme.Holo.Light">
+        android:theme="@android:style/Theme.Holo.Light"
+        android:name="android.support.multidex.MultiDexApplication">
         <meta-data
             android:name="android.app.default_searchable"
             android:value=".activities.QueryBrowserActivity" />

@@ -26,6 +26,7 @@
 -ignorewarnings
 
 -dontwarn android.support.v4.**
+-dontwarn com.viewpagerindicator.**
 
 -keep class android.support.v4.** { *; }
 -keep interface android.support.v4.app.** { *; }
