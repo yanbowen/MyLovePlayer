@@ -21,19 +21,9 @@
             android:entries="@array/visualization_types"
             android:entryValues="@array/visualization_types"
 	        android:capitalize="words"
-        	/>  
-        	
-        <ListPreference 
-	        android:dialogTitle="@string/widget_style_title"
-            android:key="@string/key_widget_style"
-            android:title="@string/widget_style_title"
-            android:summary="@string/widget_style_summary"
-            android:defaultValue="@string/widget_style_light" 
-            android:entries="@array/widget_style_types"
-            android:entryValues="@array/widget_style_types"
-	        android:capitalize="words"
-        	/>  		        
-    </PreferenceCategory>    
+        	/>
+
+	</PreferenceCategory>
     <PreferenceCategory android:title="@string/settings_storage_category" >
 
         <!-- Delete cache -->

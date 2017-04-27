@@ -55,7 +55,7 @@ public class SettingsHolder extends PreferenceActivity  implements ServiceConnec
         addPreferencesFromResource(preferencesResId);
 
         //Init widget style change option
-        initChangeWidgetTheme();
+//        initChangeWidgetTheme();
 
         // Init delete cache option
         initDeleteCache();
